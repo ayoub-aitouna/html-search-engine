@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #33BEFF;
+}
+
+.wrapper {
+    max-width: 450px;
+    margin: 150px auto;
+}
+
+.wrapper .search-box {
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+.search-box input {
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+}
+
+.search-box .icon {
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    top: 0;
+    right: 0;
+    text-align: center;
+    color: #33BEFF;
+    cursor: pointer;
+}
+
+.search-box .autocom-box {
+    padding: 0px;
+    max-height: 280px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.search-box.active .autocom-box {
+    padding: 8px 12px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.autocom-box li {
+    list-style: none;
+    padding: 12px 14px;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+    display: none;
+}
+
+.search-box.active .autocom-box li {
+    display: block;
+}
+
+.autocom-box li:hover {
+    background: #efefef;
+}
